@@ -92,7 +92,7 @@ img {
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
-  position: relative;
+  position: absolute;
   top: 32px;
 }
 .contacts-header {
@@ -531,14 +531,39 @@ img {
   overflow: hidden;
 }
 
-/* animation-name: window;
-  animation-duration: 1000ms;
-  animation-delay: 500ms;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-direction: ;
-  animation-fill-mode: ;
+/*---modal-window---*/
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms, visibility 250ms;
 }
-
-.portfolio-window:hover {
+.backdrop-modal {
+  height: 580px;
+  width: 530px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
- */
+.backdrop-button {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 7px;
+  right: 8px;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
