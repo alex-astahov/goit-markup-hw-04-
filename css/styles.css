@@ -51,6 +51,9 @@ img {
 :root {
   --text-colore: #757575;
 }
+:root {
+  --main-colore: #2196f3;
+}
 
 /*---header---*/
 .header {
@@ -65,7 +68,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .logo-studio-header {
   color: #000000;
@@ -76,26 +79,29 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
-  transition-property: color, background-color;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   top: 7px;
 }
 .site-nav:hover {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .site-nav:focus {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .site-nav-effect:after {
   content: "";
   display: block;
   height: 4px;
-  background-color: #2196f3;
+  background-color: var(--main-colore);
   border-radius: 2px;
   position: relative;
   top: 34px;
+}
+.site-nav-effect-text {
+  color: var(--main-colore);
 }
 .contacts-header {
   font-weight: 500;
@@ -108,10 +114,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header:hover {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .contacts-header:focus {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .header-main-container {
   display: flex;
@@ -192,7 +198,7 @@ img {
 }
 .button-color-main {
   color: #ffffff;
-  background: #2196f3;
+  background: var(--main-colore);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin: 0 auto;
@@ -324,12 +330,12 @@ img {
 .icon-team:hover {
   fill: #ffffff;
   border-radius: 50%;
-  background-color: #2196f3;
+  background-color: var(--main-colore);
 }
 .icon-team:focus {
   fill: #ffffff;
   border-radius: 50%;
-  background-color: #2196f3;
+  background-color: var(--main-colore);
 }
 
 /* clients */
@@ -351,12 +357,12 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-item:hover {
-  border-color: #2196f3;
-  fill: #2196f3;
+  border-color: var(--main-colore);
+  fill: var(--main-colore);
 }
 .clients-item:focus {
-  border-color: #2196f3;
-  fill: #2196f3;
+  border-color: var(--main-colore);
+  fill: var(--main-colore);
 }
 /*---footer---*/
 .footer {
@@ -377,10 +383,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-footer:hover {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .address-footer:focus {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .contacts-footer {
   font-size: 14px;
@@ -392,10 +398,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-footer:hover {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .contacts-footer:focus {
-  color: #2196f3;
+  color: var(--main-colore);
 }
 .container-logo-footer {
   display: block;
@@ -426,10 +432,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-footer:hover {
-  background-color: #2196f3;
+  background-color: var(--main-colore);
 }
 .icon-footer:focus {
-  background-color: #2196f3;
+  background-color: var(--main-colore);
 }
 .main-container-footer {
   display: flex;
@@ -448,13 +454,13 @@ img {
 }
 .button-color-portfolio:hover {
   color: #ffffff;
-  background: #2196f3;
+  background: var(--main-colore);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-color-portfolio:focus {
   color: #ffffff;
-  background: #2196f3;
+  background: var(--main-colore);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -563,6 +569,15 @@ img {
   position: absolute;
   top: 7px;
   right: 8px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop-button:hover {
+  fill: var(--main-colore);
+}
+.backdrop-button:focus {
+  fill: var(--main-colore);
 }
 .is-hidden {
   opacity: 0;
